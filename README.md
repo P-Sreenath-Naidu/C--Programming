@@ -14,7 +14,7 @@ The program includes functions for checking and processing numbers, covering the
 - 
 ## PROJECT STRUCTURE
 ```
-├── main.c
+├── main_.c
 ├── Prime_2.c
 ├── Perfect_3.c
 ├── strong_4.c
