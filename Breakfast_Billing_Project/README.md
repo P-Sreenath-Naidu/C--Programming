@@ -1,58 +1,246 @@
-# MULTI - FILE C PROGRAMMING PROJECT 
-A demonstration of multi-file compilation in C, showcasing how a single program can be organised into multiple source files and compiled together into one executable.
+# Breakfast Hotel Billing System
 
-# OVERVIEW
-This project illustrates modular programming in C by dividing functionality across several source files, each handling a distinct category of number or string processing. It is designed to demonstrate good practice in structuring larger C programs, including function declarations, definitions, and multi-file compilation using GCC.
+## Project Overview
 
-The program includes functions for checking and processing numbers, covering the following categories:
+**Breakfast Hotel Billing System** is a menu-driven C programming project that simulates a simple hotel breakfast ordering and billing system.
 
-- Switch-case & Nested Switch-case
-- Prime number checking
-- Perfect number checking
-- Armstrong number checking
-- Palindrome checking
-- 
-## PROJECT STRUCTURE
+The application allows users to select breakfast items and beverages (tea, coffee, milk), specify quantities, maintain a running bill, and complete payment using Cash, UPI, or Card.
+
+---
+
+## Project Objectives
+
+- Build a practical menu-driven C application.
+- Implement item selection and quantity-based billing.
+- Maintain a running total across multiple orders.
+- Provide separate menus for breakfast items and beverages.
+- Implement payment handling using multiple payment methods.
+- Prevent the user from exiting while an unpaid bill remains.
+- Practise structured program flow and input handling.
+
+---
+
+## Features
+
+### 1. Breakfast Menu
+
+| Item   | Price |
+|--------|------:|
+| Idly   | ₹40   |
+| Dosa   | ₹45   |
+| Puri   | ₹50   |
+| Upma   | ₹35   |
+| Pongal | ₹30   |
+
+The user selects an item and enters the quantity; the corresponding amount is added to the running total.
+
+### 2. Tea & Coffee Menu
+
+| Item   | Price |
+|--------|------:|
+| Tea    | ₹20   |
+| Coffee | ₹25   |
+| Milk   | ₹30   |
+
+### 3. Billing
+
+The program calculates the cost using:
+
 ```
-├── main_.c
-├── Prime_2.c
-├── Perfect_3.c
-├── strong_4.c
-├── Armstrong_5.c
-└── Palindrome_6.c
+Total = Price × Quantity
 ```
-Each file contributes a distinct set of functions to the overall program, which are combined at compile time into a single executable.
 
-## Concepts Demonstrated
-- Code reuse
-- Range processing
-- Menu driven application
-- Core C programming fundamentals
-- Functions (declarations and definitions)
-- Header files
-- Multi-file compilation
-- Modular programming principles
-- Use of the GCC compiler
-## Getting Started
-    -> Prerequisites
-       - A C compiler (GCC recommended)
-       - A terminal or command-line interface
-### Compilation
-     Compile all source files together using GCC:
+Multiple items can be added before payment, and the running total is displayed after each order.
+
+### 4. Payment
+
+The application supports the following payment methods:
+
+- Cash
+- UPI
+- Card
+
+Once payment is completed successfully, the final bill is displayed and the running total is reset.
+
+### 5. Exit Protection
+
+If the user attempts to exit while an unpaid bill exists, the program redirects them to the payment menu instead of allowing the program to close.
+
+### 6. Invalid Input Handling
+
+Invalid menu selections display a `"Wrong option"` message and return the user to the appropriate menu.
+
+---
+
+## Program Flow
+
+```text
+Start
+  ↓
+Main Menu
+  ├── Breakfast Menu
+  │     ├── Select Item
+  │     ├── Enter Quantity
+  │     └── Update Total
+  │
+  ├── Tea & Coffee
+  │     ├── Select Item
+  │     ├── Enter Quantity
+  │     └── Update Total
+  │
+  ├── Payment
+  │     ├── Cash
+  │     ├── UPI
+  │     └── Card
+  │
+  └── Exit
+        ↓
+   Check Pending Bill
+        ↓
+   Exit Program
+```
+
+---
+
+## Technologies Used
+
+- **Programming Language:** C
+- **Compiler:** GCC
+- **Operating System:** Linux / Ubuntu
+- **Development Environment:** Terminal
+- **Version Control:** Git / GitHub
+---
+
+## C Concepts Practised
+
+This project demonstrates the following concepts:
+
+- Variables and data types
+- `printf()` and `scanf()`
+- `if-else` statements
+- `switch-case`
+- Nested `switch-case`
+- Labels and `goto`
+- Arithmetic operations
+- User input handling
+- Menu-driven programming
+- Program flow control
+- Running-total calculation
+- Basic error and invalid-option handling
+
+---
+
+## Source Code
+
+The main source file is:
+
+```text
+Breakfast_Billing.c
+```
+---
+
+## Compilation
+
+Compile the program using GCC:
 
 ```bash
-gcc main_.c Prime_2.c Perfect_3.c strong_4.c Armstrong_5.c Palindrome_6.c -o project
+gcc Breakfast_Billing.c
 ```
-### Running the Program
-Once compiled, run the executable with:
+
+This generates the default executable:
+
+```text
+a.out
+```
+Run the program:
 ```bash
-./project
+./a.out
 ```
-## Purpose
-The primary aim of this project is to demonstrate how a larger C program can be divided into multiple source files and compiled together as a single, cohesive executable — a practice that improves code organisation, readability, and maintainability in larger software projects.
+---
+## Sample Menu
+```text
+....................................
+       BREAKFAST HOTEL BILLING
+....................................
+1) Breakfast Menu
+2) Tea & Coffee
+3) Payment
+4) Exit
+....................................
+Enter the option:
+```
+### Example Order
+
+```text
+Breakfast Menu
+
+1) Idly   : Rs.40
+2) Dosa   : Rs.45
+3) Puri   : Rs.50
+4) Upma   : Rs.35
+5) Pongal : Rs.30
+6) Back
+
+Enter the sub option: 2
+Enter the quantity: 2
+
+Total price = 90
+```
+---
+## Learning Outcomes
+
+Through this project, I practised converting a real-world requirement into a working C program.
+
+The project helped me understand:
+
+- How menu-driven applications work.
+- How to process repeated user choices.
+- How to calculate and maintain a running bill.
+- How nested menus can be implemented.
+- How payment completion can control program flow.
+- How basic C programming concepts can be combined into a practical application.
+
+---
+
+## Future Improvements
+
+The project can be enhanced further by adding:
+
+- Customer name and bill number
+- Date and time on the bill
+- Itemised final bill
+- GST calculation
+- Discount/coupon support
+- Receipt generation
+- Improved input validation
+- Dedicated functions for each menu
+- Structures for storing menu items
+- File handling to save bills
+- Dynamic menu/item management
+
+---
 
 ## Author
-    P. Sreenath Naidu
 
-## Licence
-This project is open for educational use. Feel free to fork, modify, and build upon it.
+**Sreenath**
+
+Electrical & Electronics Engineering Student
+Aspiring Embedded Systems Engineer
+
+### Skills Being Developed
+
+- C Programming
+- Embedded C
+- C++
+- Data Structures
+- Linux
+- Microcontrollers
+- Embedded Systems
+
+---
+
+## Project Status
+
+**Completed**
+
+This project forms part of my C programming practice and portfolio development for an Embedded Systems career.
