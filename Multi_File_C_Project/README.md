@@ -11,7 +11,7 @@ The program includes functions for checking and processing numbers, covering the
 - Perfect number checking
 - Armstrong number checking
 - Palindrome checking
-- 
+  
 ## PROJECT STRUCTURE
 ```
 ├── main_.c
