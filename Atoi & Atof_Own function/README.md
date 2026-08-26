@@ -12,7 +12,7 @@ The programs demonstrate string traversal, pointer manipulation, ASCII character
 | `my_Atoi()`  | String to integer conversion          | `int`       |
 | `my_Atof()`  | String to floating-point conversion   | `double`    |
 
-## 2. `my_Atoi()` Implementation
+## `my_Atoi()` Implementation
 
 The `my_Atoi()` function converts a string containing an integer into an integer value.
 
@@ -29,7 +29,7 @@ For example :
 = 53 - 48
 = 5
 ```
-## 3. `my_Atoi()` Working Example
+## `my_Atoi()` Working Example
 
 **Input:** `123`
 
@@ -50,7 +50,7 @@ enter a string
 
 ---
 
-## 4. Negative Number Handling
+## Negative Number Handling
 
 **Input:** `-456`
 
@@ -76,7 +76,7 @@ enter a string
 -456
 ```
 
-## 5. Leading Space Handling
+## Leading Space Handling
 
 Leading spaces are skipped using:
 
@@ -99,7 +99,7 @@ enter a string
 
 ---
 
-## 6. `my_Atof()` Implementation
+## `my_Atof()` Implementation
 
 The `my_Atof()` function extends the integer conversion concept to support floating-point numbers, processing the number in two parts:
 
@@ -112,7 +112,7 @@ For example, `123.456` is processed as `123 + 0.456`.
 The result is stored in a `double` variable, and a separate variable `A` is used for fractional-place calculation.
 ---
 
-## 7. `my_Atof()` — Integer Part Calculation
+## `my_Atof()` — Integer Part Calculation
 
 **Input:** `123.456`
 
@@ -127,7 +127,7 @@ The integer part is processed first, using the same logic as `my_Atoi()`:
 
 **Integer part = 123**
 
-## 8. `my_Atof()` — Fractional Calculation
+## `my_Atof()` — Fractional Calculation
 
 Once the decimal point is detected in `123.456`, the fractional digits are processed as follows:
 
@@ -141,7 +141,7 @@ Starting with `A = 10`:
 
 After each digit, `A` is updated with `A = A * 10`.
 
-## 9. `my_Atof()` Output
+## `my_Atof()` Output
 
 For the input `123.456`, the result is printed using:
 
@@ -158,7 +158,7 @@ enter a string
 123.456
 123.45600
 ```
-## 10. Negative Floating-Point Calculation
+## Negative Floating-Point Calculation
 
 **Input:** `-12.345`
 
@@ -184,7 +184,7 @@ enter a string
 -12.345
 -12.34500
 ```
-## 11. Sample Test Cases
+## Sample Test Cases
 
 ### `my_Atoi()`
 
@@ -206,7 +206,7 @@ enter a string
 
 These examples demonstrate the intended conversion logic of the two programs.
 
-## 12. Comparison: `my_Atoi()` vs `my_Atof()`
+## Comparison: `my_Atoi()` vs `my_Atof()`
 
 | Feature                 | `my_Atoi()` | `my_Atof()` |
 |--------------------------|:-----------:|:-----------:|
@@ -221,7 +221,7 @@ These examples demonstrate the intended conversion logic of the two programs.
 
 ---
 
-## 14. Project Files
+## Project Files
 
 ```
 ├── Own_Atoi.c
