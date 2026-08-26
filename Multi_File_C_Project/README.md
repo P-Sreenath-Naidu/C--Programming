@@ -46,7 +46,7 @@ gcc main_.c Prime_2.c Perfect_3.c strong_4.c Armstrong_5.c Palindrome_6.c -o pro
 ### Running the Program
 Once compiled, run the executable with:
 ```bash
-./project
+./project (or) ./a.out
 ```
 ## Purpose
 The primary aim of this project is to demonstrate how a larger C program can be divided into multiple source files and compiled together as a single, cohesive executable — a practice that improves code organisation, readability, and maintainability in larger software projects.
