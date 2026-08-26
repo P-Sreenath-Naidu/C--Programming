@@ -10,14 +10,11 @@ int main ()
 double my_Atoi(char*s)
 {
 	double a=0,A=10;
-	double sign=1,flag=0;
-
+	double sign=1;
 	while(*s==' ')
 		s++;
-
 	while(*s=='"')
 		s++;
-
 	if(*s=='-')
 	{
 		sign=-1;
