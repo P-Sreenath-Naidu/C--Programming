@@ -1,0 +1,103 @@
+#atoi() AND atof() - TEST CASES
+
+Test Case 1 //Positive Integer
+Input:
+12345
+
+Expected atoi output:
+12345
+
+Test Case 2 // Negative Integer
+Input:
+-456
+
+Expected atoi 
+output:
+-456
+
+Test Case 3 // Zero
+Input:
+0
+
+Expected atoi 
+output:
+0
+
+Test Case 4 //Positive Integer
+Range Based  :-
+
+Inputs         outputs
+
+2147483647	   2147483647
+-2147483648	  -2147483648
+2147483648	   2147483647
+-2147483649	  -2147483648
+99999999999	   2147483647
+-99999999999  -2147483648
+
+Test Case 5 // Positive Floating Point
+Input:
+123.45
+
+Expected atof 
+output:
+123.45
+
+Test Case 6 // Negative Floating Point
+Input:
+-45.67
+
+Expected atof 
+output:
+-45.67
+
+Test Case 7 // Positive Sign
+Input:
++789
+
+Expected atoi 
+output:
+789
+
+
+Test Case 7 // Floating Point with Positive Sign
+Input:
++78.90
+
+Expected atof
+output:
+78.90
+
+
+Test Case 8 // Invalid Characters After Number
+Input:
+123abc
+
+Expected atoi 
+output:
+123
+
+Test Case 9 // Invalid Characters After Decimal Number
+Input:
+45.67xyz
+
+Expected atof 
+output:
+45.67
+
+Test Case 10 // Leading Spaces
+Input:
+   -123
+
+Expected atoi 
+output:
+-123
+
+
+Test Case 11 // Leading Tab
+Input:
+	456
+
+Expected atoi 
+output:
+456
